@@ -1,0 +1,26 @@
+{
+    "extends": "tslint:recommended",
+    "rules": {
+      "max-line-length": {
+        "options": [
+          120
+        ]
+      },
+      "quotemark": [true, "double", "avoid-escape", "avoid-template"],
+      "new-parens": true,
+      "no-arg": true,
+      "no-bitwise": true,
+      "no-conditional-assignment": true,
+      "no-consecutive-blank-lines": true,
+      "object-literal-sort-keys": false,
+      "no-console":false,
+      "max-classes-per-file":false
+    },
+    "jsRules": {
+      "max-line-length": {
+        "options": [
+          120
+        ]
+      }
+    }
+  }
