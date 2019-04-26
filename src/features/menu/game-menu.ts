@@ -13,7 +13,7 @@ export class GameMenu extends Phaser.GameObjects.GameObject {
 
     public addMenuItem(title: string, action: () => void): GameMenu {
         const y = this.y + (this.items.length * this.menuItemHeight);
-        this.items.push(new GameMenuItem(this.scene, this.x, y, title, action));
+        this.items.push(new GameMenuItem(this.scene, this.x, y, this.menuItemHeight, title, action));
         return this;
     }
 }
@@ -21,19 +21,21 @@ export class GameMenu extends Phaser.GameObjects.GameObject {
 class GameMenuItem extends Phaser.GameObjects.GameObject {
     private x: number;
     private y: number;
+    private height: number;
     private title: string;
     private action: () => void;
     private text: Phaser.GameObjects.Text;
 
-    constructor(scene: Phaser.Scene, x: number, y: number, title: string, action: () => void) {
+    constructor(scene: Phaser.Scene, x: number, y: number, height: number, title: string, action: () => void) {
         super(scene, "GameMenuItem");
         this.scene = scene;
         this.title = title;
         this.action = action;
         this.x = x;
         this.y = y;
+        this.height = height;
 
-        this.text = this.scene.add.text(x, y, title, { fill: "#0f0"});
+        this.text = this.scene.add.text(x, y, title, { fill: "#0f0", fontSize: this.height});
         this.text.setOrigin(0.5);
         this.text.setInteractive({ useHandCursor: true })
         .on("pointerover", () => this.enterButtonHoverState() )

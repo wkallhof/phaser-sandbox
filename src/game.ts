@@ -1,10 +1,11 @@
-import { MainScene } from './scenes/mainScene';
+import { MenuScene } from "./scenes/menu-scene";
+import { TopDownCameraRotateScene } from "./scenes/top-down-camera-rotate-scene";
 
 const config: GameConfig = {
   type: Phaser.AUTO,
   width: 800,
   height: 600,
-  scene: [MainScene],
+  scene: [MenuScene, TopDownCameraRotateScene],
 };
 
 const game = new Phaser.Game(config);
