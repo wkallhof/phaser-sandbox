@@ -11,13 +11,14 @@ export class MenuScene extends Phaser.Scene {
   }
 
   public preload() {
-    this.load.image("phaser", phaserPng);
+    // this.load.image("phaser", phaserPng);
   }
 
   public create() {
     const centerX = this.game.renderer.width / 2;
     const centerY = this.game.renderer.height / 2;
     this.menu = new GameMenu(this, centerX, centerY );
+    this.add.existing(this.menu);
     this.menu
       .addMenuItem("Top Down Camera Rotate", () => {
         this.scene.start("TopDownCameraRotateScene");
