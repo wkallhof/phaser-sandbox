@@ -1,17 +1,15 @@
-# phaser-electron-typescript-parcel [![Build Status](https://travis-ci.org/distantcam/phaser-electron-typescript-parcel.svg?branch=master)](https://travis-ci.org/distantcam/phaser-electron-typescript-parcel)
+# phaser-sanbox
 
-A minimal template with the following things.
+The goal of this project is to create a sandbox of game development ideas, methodologies, implementations for quick reference when doing things like game jams. 
+
+Initial codebase pulled from [distantcam/phaser-electron-typescript-parcel](https://github.com/distantcam/phaser-electron-typescript-parcel)
+
+A minimal Phaser 3 sandbox with the following things.
 
 - [Phaser](https://phaser.io/) 🕹️ Desktop and Mobile HTML5 game framework
 - [Electron](https://electronjs.org/) ⚛️ Build cross platform desktop apps with JavaScript, HTML, and CSS
 - [Parcel](https://github.com/parcel-bundler/parcel) 📦 Blazing fast, zero configuration web application bundler
 - [TypeScript](https://www.typescriptlang.org/) ⌨️ is a typed superset of JavaScript that compiles to plain JavaScript.
-
-## Installation
-
-* `git@github.com:distantcam/phaser-electron-typescript-parcel.git`
-* `cd phaser-electron-typescript-parcel`
-* `yarn`
 
 ## Usage
 
