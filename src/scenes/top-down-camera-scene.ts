@@ -1,7 +1,7 @@
 import "phaser";
 import playerSprite from "../assets/player.png";
 
-export class TopDownCameraRotateScene extends Phaser.Scene {
+export class TopDownCameraScene extends Phaser.Scene {
 
     private user!: Phaser.Physics.Matter.Image;
     private cursors!: Phaser.Input.Keyboard.CursorKeys;
@@ -13,7 +13,7 @@ export class TopDownCameraRotateScene extends Phaser.Scene {
     private backKey!: Phaser.Input.Keyboard.Key;
 
     constructor() {
-        super({ key: "TopDownCameraRotateScene" });
+        super({ key: "TopDownCameraScene" });
     }
 
     public preload() {
@@ -26,7 +26,7 @@ export class TopDownCameraRotateScene extends Phaser.Scene {
         this.matter.world.setGravity(0, 0);
         this.matter.world.setBounds(0, 0, 1600, 1200);
 
-        this.add.text(10, 10, "TopDownCameraRotateScene");
+        this.add.text(10, 10, "TopDownCameraScene");
 
         this.user = this.matter.add.image(400, 300, "player");
         this.user.setFrictionAir(0.15);
@@ -39,10 +39,10 @@ export class TopDownCameraRotateScene extends Phaser.Scene {
 
     public update() {
         if (this.cursors.left && this.cursors.left.isDown) {
-            this.user.setAngularVelocity(-0.02);
+            this.user.setAngularVelocity(-0.05);
 
         } else if (this.cursors.right && this.cursors.right.isDown) {
-            this.user.setAngularVelocity(0.02);
+            this.user.setAngularVelocity(0.05);
         }
 
         if (this.cursors.up && this.cursors.up.isDown) {
@@ -61,8 +61,6 @@ export class TopDownCameraRotateScene extends Phaser.Scene {
         if (this.strafeRightKey.isDown) {
             this.user.thrustRight(0.1);
         }
-
-        this.cameras.main.setAngle(-this.user.angle - 90);
     }
 
     private bindInputs(): void{

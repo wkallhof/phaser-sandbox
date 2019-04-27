@@ -14,7 +14,8 @@
       "no-consecutive-blank-lines": true,
       "object-literal-sort-keys": false,
       "no-console":false,
-      "max-classes-per-file":false
+      "max-classes-per-file":false,
+      "whitespace":false,
     },
     "jsRules": {
       "max-line-length": {

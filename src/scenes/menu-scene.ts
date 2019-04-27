@@ -1,17 +1,11 @@
 import "phaser";
 import { GameMenu } from "../features/menu/game-menu";
 
-import phaserPng from "../assets/phaser.png";
-
 export class MenuScene extends Phaser.Scene {
   private menu!: GameMenu;
 
   constructor() {
     super({ key: "MenuScene" });
-  }
-
-  public preload() {
-    // this.load.image("phaser", phaserPng);
   }
 
   public create() {
@@ -20,8 +14,8 @@ export class MenuScene extends Phaser.Scene {
     this.menu = new GameMenu(this, centerX, centerY );
     this.add.existing(this.menu);
     this.menu
-      .addMenuItem("Top Down Camera Rotate", () => {
-        this.scene.start("TopDownCameraRotateScene");
-      });
+      .addMenuItem("Top Down Camera", () => this.scene.start("TopDownCameraScene"))
+      .addMenuItem("Top Down Camera Rotate", () => this.scene.start("TopDownCameraRotateScene"));
+
   }
 }
