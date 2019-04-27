@@ -1,4 +1,4 @@
-# phaser-sanbox
+# phaser-sandbox
 
 The goal of this project is to create a sandbox of game development ideas, methodologies, implementations for quick reference when doing things like game jams. 
 
