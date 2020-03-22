@@ -1,6 +1,7 @@
 import { MenuScene } from "./scenes/menu-scene";
 import { TopDownCameraRotateScene } from "./scenes/top-down-camera-rotate-scene";
 import { TopDownCameraScene } from "./scenes/top-down-camera-scene";
+import { PhysicsScene } from "./scenes/physics-scene";
 
 const config: GameConfig = {
   type: Phaser.WEBGL,
@@ -13,7 +14,7 @@ const config: GameConfig = {
           debug: true,
       },
   },
-  scene: [MenuScene, TopDownCameraScene, TopDownCameraRotateScene],
+  scene: [MenuScene, TopDownCameraScene, TopDownCameraRotateScene, PhysicsScene],
 };
 
 const game = new Phaser.Game(config);

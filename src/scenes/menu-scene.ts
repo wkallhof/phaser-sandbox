@@ -9,13 +9,17 @@ export class MenuScene extends Phaser.Scene {
   }
 
   public create() {
+
+    this.scene.start("PhysicsScene")
+
     const centerX = this.game.renderer.width / 2;
     const centerY = this.game.renderer.height / 2;
     this.menu = new GameMenu(this, centerX, centerY );
     this.add.existing(this.menu);
     this.menu
       .addMenuItem("Top Down Camera", () => this.scene.start("TopDownCameraScene"))
-      .addMenuItem("Top Down Camera Rotate", () => this.scene.start("TopDownCameraRotateScene"));
+      .addMenuItem("Top Down Camera Rotate", () => this.scene.start("TopDownCameraRotateScene"))
+      .addMenuItem("Phyics", () => this.scene.start("PhysicsScene"));
 
   }
 }

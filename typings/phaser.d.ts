@@ -58168,7 +58168,7 @@ declare namespace Phaser {
                  * [description]
                  * @param options [description]
                  */
-                mouseSpring(options: object): MatterJS.Constraint;
+                mouseSpring(options?: object): MatterJS.Constraint;
 
                 /**
                  * [description]
